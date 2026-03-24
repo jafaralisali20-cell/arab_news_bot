@@ -7,11 +7,11 @@ from aiohttp import web
 
 from sources import RSS_FEEDS
 from utils import clean_text, make_hash, is_short
+BOT_TOKEN     = "8602549699:AAEOrF-CnILqUSLlOi-6DHf9amrVaAYjsu8"
+TARGET        = "@WorldNewsLi"
+# 
 
-BOT_TOKEN     = os.environ["BOT_TOKEN"]
-TARGET        = os.environ.get("TARGET_CHANNEL", "@WorldNewsLi")
-POLL_INTERVAL = 30  # seconds
-
+POLL_INTERVAL = 30 # seconds
 # Persistent in-memory dedup cache
 _seen: set[str] = set()
 
